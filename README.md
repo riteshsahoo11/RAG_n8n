@@ -6,6 +6,8 @@
     and answers questions based on that data.
 
 🛠️ **Architecture Diagram**
+        
+[n8n diagram code.txt](https://github.com/user-attachments/files/31255254/n8n.diagram.code.txt)
 graph TD
     subgraph Phase 1: Data Processing
         A[Google Drive Trigger] -->|File Created| B(Download File)
@@ -14,7 +16,7 @@ graph TD
         D --> E[(Pinecone Vector Store)]
     end
 
-subgraph Phase 2: Retrieval Agent
+    subgraph Phase 2: Retrieval Agent
         F[n8n Chat Trigger] --> G{AI Agent}
         H[Google Gemini LLM] --> G
         I[Simple Memory] --> G
